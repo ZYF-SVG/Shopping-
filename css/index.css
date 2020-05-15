@@ -1,0 +1,286 @@
+/* 
+我们引入的 flexible.js 将页面划分为 10 等份
+设计图为 750px，每份为 75，
+所以 font-size：75px； 1rem = 75px; */
+@media screen and (min-width: 750px) {
+  html {
+    /*最大为 750，但超出750时，就设置html的字体大小为 75px；*/
+    font-size: 75px!important; 
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  width: 10rem; /*最大为 750px； */
+  margin: 0 auto;
+  background-color: #f7f7f7;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* 搜索框 */
+.sn_nav_wrapper {
+  position: fixed;
+  top: 0;
+  width: 10rem;
+  height: 2.346667rem;
+  background-color: #e61434;
+  z-index: 99;
+}
+.content_hd {
+  display: flex;
+  width: 9.093333rem;
+  height: 1.173333rem;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.content_hd a:first-child,
+.content_hd a:last-child  {
+  width: .48rem;
+  height: .8rem;
+  margin: .24rem 0 0 0;
+}
+.content_hd a:nth-child(2) {
+  height: 1.173333rem;
+  width: 6.666667rem;
+  margin: 0 auto;
+}
+.content_hd a:nth-child(2) img {
+  margin-top: .186667rem;
+}
+.content_hd img {
+  width: 100%;
+}
+.content_bd {
+  width: 9.093333rem;
+  height: 1.026667rem;
+  margin: 0 auto;
+  padding-top: .2rem;
+}
+.searce {
+  display: block;
+  width: 100%;
+  height: .853333rem;
+  background-color: #fff;
+  border-radius: .42rem;
+}
+
+/* 主体内容 */
+.index_wrap {
+  margin-top: 2.346667rem;
+}
+
+/* 轮播图 */
+.banner {
+  position: relative;
+  height: 3.466667rem;
+}
+.banner img {
+  position: absolute;
+  width: 10rem;
+  height: 3.466667rem;
+  z-index: 0;
+}
+.swipe_wrapper {
+  position: absolute;
+  left: 50%;
+  width: 9.36rem;
+  height: 3.466667rem;
+  border-radius: 0.3rem;
+  z-index: 1;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+.swipe_wrapper ul {
+  position: absolute;
+  width: 600%;
+  height: 3.466667rem;
+  overflow: hidden;
+  margin-left: -351px;
+  z-index: 99;
+}
+.swipe_wrapper ul li {
+  float: left;
+  width: 9.36rem;
+  height: 3.466667rem;
+}
+.swipe_wrapper  ul li img {
+  width: 9.36rem;
+  height: 3.466667rem;
+}
+/* 小圆点 */
+.swipe_wrapper ol {
+  position: absolute;
+  left: 50%;
+  bottom: 0.133333rem; 
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+.swipe_wrapper ol li {
+  float: left;
+  margin: 5px;
+  width: .12rem;
+  height: .1rem;
+  border-radius: 50%;
+  background-color: rgb(2, 2, 2);
+  list-style: none;
+  transition: all .2s;
+}
+.swipe_wrapper ol li.default {
+  width: .28rem;
+  border-radius: .05rem;
+  /* padding-left: .2rem; */
+  background-color: #fff;
+}
+
+/* 三列广告 */
+.news {
+  display: flex;
+  height: 2.8rem;
+}
+.news a {
+  flex: 1;
+}
+.news a img {
+  width: 100%;
+}
+
+/* 导航 */
+nav {
+  display: flex;
+  height: 4.106667rem;
+  flex-wrap: wrap;
+}
+nav a {
+  display: flex;
+  flex: 20%;
+  height: 1.893333rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+nav a img {
+  width: 1.146667rem;
+  height: 1.146667rem;
+}
+nav a span {
+  font-size: 0.3rem;
+}
+
+/* 优惠价 */
+.new_img {
+  display: flex;
+  height: 3.12rem;
+}
+.new_img a:first-child {
+  width: 4.986667rem ;
+}
+.new_img a:nth-child(2) {
+  width: 2.493333rem;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+.new_img a:last-child {
+  width: 2.48rem;
+}
+.new_img a img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 第一模块 */
+.hor_view {
+  display: flex;
+  width: 9.36rem;
+  height: 3.44rem;
+  margin: .32rem auto 0;
+  background-color: #fff;
+  border: .013333rem solid #f2e9e1;
+}
+.zsq_area {
+  width: 4.666667rem;
+  border-right: .013333rem solid #f2e9e1;
+}
+.big_space {
+  width: 4.666667rem;
+}
+.hor_view div h3{
+  height: .586667rem;
+  margin: .32rem 0 0 .32rem;
+  font-size: .333333rem;
+  font-weight: 400;
+}
+.hor_view div p {
+  display: block;
+  height: .453333rem;
+  margin-left: .32rem;
+  color: #99948e;
+  font-size: .333333rem;
+}
+.hor_view ul {
+  display: flex;
+  padding-left: .533333rem;
+}
+.hor_view ul li:first-child {
+  margin-right: .733333rem;
+}
+.hor_view ul li {
+  width: 1.6rem;
+  height: 1.986667rem;
+}
+.hor_view ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hor_view ul li a img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.hor_view ul li a span {
+  color: #ff5c0e;
+  font-size: .266667rem;
+}
+
+.two {
+  margin-top: 0;
+}
+
+/* 底部导航 */
+.tab {
+  position: fixed;
+  bottom: 0;
+  min-width: 4.266667rem;
+  width: 10rem;
+  height: 1.346667rem;
+  background-color: #fff;
+  display: flex;
+}
+
+.tab a {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tab a img {
+  width: .64rem;
+  height: .64rem;
+}
+.tab a span {
+  font-size: .266667rem;
+}
