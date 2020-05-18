@@ -17,7 +17,6 @@ window.addEventListener('load', function() {
     var ulS = -index * liW;
     ul.style.transition = 'all .3s'
     ul.style.transform = 'translateX('+ ulS +'px)';
-    console.log(index);
   }, 2000)
 
 
@@ -87,4 +86,23 @@ window.addEventListener('load', function() {
     }, 2000)
   })
 
-})
+
+  // 回到顶部
+  var nav = document.querySelector('nav');
+  var goBock = document.querySelector('.go_bock');
+
+  // 侦听 window 的滚动
+  window.addEventListener('scroll', function() {
+    // 如果 window 卷去的大小 >= nav的 offsetTop 就显示 回到顶部
+    if (this.window.pageYOffset >= nav.offsetTop) {
+      goBock.style.display = 'block';
+    } else {
+      goBock.style.display = 'none';
+    }
+  })
+  // 点击回到顶部
+  goBock.addEventListener('click', function() {
+    goTop(window, 0);
+  })
+
+}) 

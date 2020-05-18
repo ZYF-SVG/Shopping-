@@ -19,6 +19,7 @@ body {
   width: 10rem; /*最大为 750px； */
   margin: 0 auto;
   background-color: #f7f7f7;
+  height: 1000px;
 }
 
 a {
@@ -80,6 +81,7 @@ ul li {
 /* 主体内容 */
 .index_wrap {
   margin-top: 2.346667rem;
+  margin-bottom: 1.346667rem;
 }
 
 /* 轮播图 */
@@ -108,7 +110,7 @@ ul li {
   width: 600%;
   height: 3.466667rem;
   overflow: hidden;
-  margin-left: -351px;
+  margin-left: -9.36rem;
   z-index: 99;
 }
 .swipe_wrapper ul li {
@@ -283,4 +285,23 @@ nav a span {
 }
 .tab a span {
   font-size: .266667rem;
+}
+
+/* 回到顶部 */
+.go_bock {
+  display: none;
+  position: fixed;
+  bottom: 2.266667rem;
+  right: .266667rem;
+  width: .8rem;
+  height: .8rem;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  z-index: 9999;
+  line-height: .8rem;
+  text-align: center;
+}
+.go_bock img {
+  width: 70%;
+  vertical-align: middle;
 }
