@@ -1,0 +1,121 @@
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 32px !important;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 75px !important;
+  }
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/load/');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../font/iconfont.woff2') format('woff2'),
+      url('../font/iconfont.woff') format('woff'),
+      url('../font/iconfont.ttf') format('truetype'),
+      url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 10rem;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: iconfont;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+// 顶部搜索区
+.header_fix {
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 10rem;
+  height: 1.44rem;
+  background: pink;
+  .fl{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .40rem;
+    font-weight: 400;
+
+  }
+  .fr {
+    flex: 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      display: flex;
+      align-items: center;
+      width: 6.96rem;
+      height: .853333rem;
+      padding-left: .2rem;
+      color: #999;
+      background-color: #F7F7F7;
+      border-radius: .4rem;
+      font-size: .35rem;
+      -webkit-tap-highlight-color: transparent;
+      span {
+        font-size: .5rem;
+        margin-left: .2rem;
+      }
+    }
+  }
+}
+
+// 内容列表
+.conent {
+  height: 100%;
+  margin-top: 1.44rem;
+  overflow: hidden;
+  .fl {
+    position: fixed;
+    background-color: #C3E468;
+    float: left;
+    height: calc(100% - 3rem);
+    overflow-y: auto;
+    ul {
+      display: flex;
+      flex-direction: column;
+      
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.4rem;
+        height: 1.333333rem;
+        font-size:  0.35rem;
+      }
+    }
+  }
+  .fr {
+    width: 7.6rem;
+    float: right;
+    background-color: #85E97C;
+  }
+}
+
+.list {
+  position: fixed;
+  bottom: 0;
+}

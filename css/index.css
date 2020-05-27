@@ -2,6 +2,12 @@
 我们引入的 flexible.js 将页面划分为 10 等份
 设计图为 750px，每份为 75，
 所以 font-size：75px； 1rem = 75px; */
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 32px !important;
+  }
+}
+
 @media screen and (min-width: 750px) {
   html {
     /*最大为 750，但超出750时，就设置html的字体大小为 75px；*/
@@ -261,31 +267,6 @@ nav a span {
   margin-top: 0;
 }
 
-/* 底部导航 */
-.tab {
-  position: fixed;
-  bottom: 0;
-  min-width: 4.266667rem;
-  width: 10rem;
-  height: 1.346667rem;
-  background-color: #fff;
-  display: flex;
-}
-
-.tab a {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.tab a img {
-  width: .64rem;
-  height: .64rem;
-}
-.tab a span {
-  font-size: .266667rem;
-}
 
 /* 回到顶部 */
 .go_bock {
